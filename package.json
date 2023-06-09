@@ -1,16 +1,18 @@
 {
-	"name": "main",
-	"version": "1.0.0",
-	"description": "",
-	"main": "main.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"author": "char",
-	"license": "ISC",
-	"dependencies": {
-		"ethereumjs-common": "^1.5.2",
-		"ethereumjs-tx": "^2.1.2",
-		"web3": "^1.7.5"
-	}
+  "name": "tes",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ SChar-Rapid/tes",
+    "create-local": "graph create --node http://localhost:8020/ SChar-Rapid/tes",
+    "remove-local": "graph remove --node http://localhost:8020/ SChar-Rapid/tes",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 SChar-Rapid/tes",
+    "test": "graph test"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.33.0",
+    "@graphprotocol/graph-ts": "0.27.0"
+  },
+  "devDependencies": { "matchstick-as": "0.5.0" }
 }
